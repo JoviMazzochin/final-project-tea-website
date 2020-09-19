@@ -15,3 +15,43 @@
 .icon {
     font-size: 30px;
 }
+
+.container-item {
+    width: 700px;
+    height: 500px;
+}
+
+.divider {
+    border-bottom: 2px solid gray;
+    width: 90%;
+    opacity: 0.3;
+}
+
+.image-card-size {
+    width: 65% !important;
+    height: 65% !important;
+}
+
+.shadow-card {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.small-img {
+    width: 75px;
+    height: 75px;
+}
+
+.small-img img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.small-img img:hover {
+    transform: scale(1.2);
+}
+
+.chevron {
+    font-size: 20px;
+    color: black;
+}
