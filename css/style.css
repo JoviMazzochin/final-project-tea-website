@@ -9,7 +9,7 @@
 }
 
 .welcome {
-    background-image: url('/front/images/background/tea.png');
+    background-image: url('../images/background/tea.png');
     height: 90vh;
     width: 100%;
     position: block;
@@ -21,6 +21,10 @@
 .welcome-texts {
     padding-left: 20%;
     padding-top: 15%;
+}
+
+.icon {
+    font-size: 30px;
 }
 
 .welcome-texts h1 {
@@ -44,14 +48,14 @@
 }
 
 .big-image {
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-image: url('/front/images/background/green tea.jpg');
-  text-align: left;
-  transition: all 1s;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url('../images/background/green-tea.jpg');
+    text-align: left;
+    transition: all 1s;
 }
 
 .big-image:hover {
@@ -61,7 +65,7 @@
 .overlay {
   position: absolute;
   height: 100vh;
-    width: 100vw;
+  width: 100vw;
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.8);
@@ -87,6 +91,54 @@
     font-family: 'Major Mono Display', monospace;
     font-size:40px;
 }
+
+/*FOOTER*/
+
+.big-image-footer {
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url('../images/background/night2.jpg');
+    text-align: left;
+    transition: all 1s;
+}
+
+.overlay-footer {
+  position: absolute;
+  height: 80vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+}
+
+.overlay-footer h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 32px;
+}
+
+.overlay-footer p {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.text-footer {
+    width: 50%;
+    height: 40px;
+}
+
+
+
 
 .p-50 {
     padding: 0 25%;
