@@ -1,3 +1,7 @@
+body {
+    background-color: rgba(0,0,0,0.30);
+}
+
 .bg-white {
     background-color: white;
 }
