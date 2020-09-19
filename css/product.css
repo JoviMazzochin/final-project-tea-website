@@ -1,0 +1,17 @@
+.bg-white {
+    background-color: white;
+}
+
+.logo {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 2rem;
+    /* font-family: 'Roboto Mono', monospace; */
+}
+
+.navbar-icons .icon{
+    color: black;
+}
+
+.icon {
+    font-size: 30px;
+}

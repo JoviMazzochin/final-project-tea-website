@@ -8,6 +8,10 @@
     /* font-family: 'Roboto Mono', monospace; */
 }
 
+.navbar-icons .icon{
+    color: black;
+}
+
 .welcome {
     background-image: url('../images/background/tea.png');
     height: 90vh;
@@ -18,14 +22,15 @@
     background-size: cover;
 }
 
+.icon {
+    font-size: 30px;
+}
+
 .welcome-texts {
     padding-left: 20%;
     padding-top: 15%;
 }
 
-.icon {
-    font-size: 30px;
-}
 
 .welcome-texts h1 {
     font-family: 'Roboto Mono', monospace;
@@ -92,6 +97,11 @@
     font-size:40px;
 }
 
+/*CARD*/
+.shadow-card {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
 /*FOOTER*/
 
 .big-image-footer {
@@ -136,9 +146,6 @@
     width: 50%;
     height: 40px;
 }
-
-
-
 
 .p-50 {
     padding: 0 25%;
