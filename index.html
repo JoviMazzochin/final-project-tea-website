@@ -28,7 +28,8 @@
       </div>
 
       <span class="navbar-icons">
-        <i class="icon far fa-user"></i>
+        <a data-toggle="modal" data-target="#userModal"><i class="icon far fa-user"></i></a>
+        
         <i class="ml-5 icon fa fa-shopping-cart"></i>
       </span>
 
@@ -63,9 +64,10 @@
           <img src="./images/products/p1.png" class="card-img-top" alt="...">
           <div class="card-body">
             <div class="text-center">
+              <h3>Some kind of tea</h3>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <p class="card-text"><b>$ 15,00</b></p>
-              <a type="button" class="btn btn-outline-dark">Buy now</a>
+              <a type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#productModal">Buy now</a>
             </div>
           </div>
         </div>
@@ -74,9 +76,10 @@
           <img src="./images/products/p2.png" class="card-img-top" alt="...">
           <div class="card-body">
             <div class="text-center">
+              <h3>Some kind of tea</h3>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <p class="card-text"><b>$ 15,00</b></p>
-              <a type="button" class="btn btn-outline-dark">Buy now</a>
+              <a type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#productModal">Buy now</a>
             </div>
           </div>
         </div>
@@ -85,9 +88,10 @@
           <img src="./images/products/p3.png" class="card-img-top" alt="...">
           <div class="card-body">
             <div class="text-center">
+              <h3>Some kind of tea</h3>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <p class="card-text"><b>$ 15,00</b></p>
-              <a type="button" class="btn btn-outline-dark">Buy now</a>
+              <a type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#productModal">Buy now</a>
             </div>
           </div>
         </div>
@@ -96,9 +100,10 @@
           <img src="./images/products/p4.png" class="card-img-top" alt="...">
           <div class="card-body">
             <div class="text-center">
+              <h3>Some kind of tea</h3>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <p class="card-text"><b>$ 15,00</b></p>
-              <a type="button" class="btn btn-outline-dark">Buy now</a>
+              <a type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#productModal">Buy now</a>
             </div>
           </div>
         </div>
@@ -107,9 +112,10 @@
           <img src="./images/products/p5.png" class="card-img-top" alt="...">
           <div class="card-body">
             <div class="text-center">
+              <h3>Some kind of tea</h3>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <p class="card-text"><b>$ 15,00</b></p>
-              <a type="button" class="btn btn-outline-dark">Buy now</a>
+              <a type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#productModal">Buy now</a>
             </div>
           </div>
         </div>
@@ -151,8 +157,98 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="https://kit.fontawesome.com/f40500f32d.js" crossorigin="anonymous"></script>
+    <!-- Modal -->
+
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+    
+          <div class="modal-header col-12 align-items-center">
+            <h4 class="modal-title text-center">Some Tea</h4>
+            <button type="button" class="close" data-dismiss="modal"><span><i class="fas fa-times"></i></span></button>
+          </div>
+    
+          <div class="col-12 modal-body text-center">
+            <img src="./images/products/p4.png" class="selected-img card-img-top image-card-size" alt="...">
+          <div class="divider"></div>
+            <div class="card-body">
+                <div class="text-center">
+                    <div class="row d-flex justify-content-between mb-5 align-items-center">
+                        <a href="#"><i class="chevron fa fa-chevron-left"></i></a>
+                        <div class="small-img bg-success ml-2">
+                            <img src="./images/products/p1.png" alt="">
+                        </div>
+                        <div class="small-img bg-success">
+                            <img src="./images/products/p2.png" alt="">
+                        </div>
+                        <div class="small-img bg-success">
+                            <img src="./images/products/p3.png" alt="">
+                        </div>
+                        <div class="small-img bg-success">
+                            <img src="./images/products/p4.png" alt="">
+                        </div>
+                        <a href="#"><i class="chevron fa fa-chevron-right"></i></a>
+                    </div>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <select class="mb-3" name="amount" id="amount">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                      </select>
+                    <p class="card-text" id="final-price"><b>$ 15,00</b></p>
+                </div>
+            </div>
+            <div class="col-12 modal-footer justify-content-center">
+              <a type="button" class="btn btn-outline-dark">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="userModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+    
+          <div class="col-12 modal-body text-center justify-content-center">
+              <h1 class="mb-5">Login</h1>
+              <div class="d-flex mb-4 justify-content-center">
+                  <a type="button" class="btn btn-facebook mr-2">Login with Facebook</a>
+                  <a type="button" class="btn btn-google">Login with Gmail</a>
+              </div>
+              <p class="my-3" style="color: rgba(128, 128, 128, 0.336);">Or</p>
+              <form id="inputsLogin" action="" method="post" class="d-flex flex-column justify-content-between">
+                  <div class="d-flex flex-column align-items-center mb-3 form-group">
+                      <label for="email">E-mail:</label>
+                      <input type="email" name="email" id="email">
+                  </div>
+                  <div class="d-flex flex-column align-items-center form-group">
+                      <label for="password">Password:</label>
+                      <input type="password" name="password" id="password">
+                    </div>
+                    <p>Forget password</p>
+                    <button type="submit" class="btn btn-dark mt-5">Login</button>
+                  </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
+  <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/11bbedc4e8.js" crossorigin="anonymous"></script>
+  <script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
+  <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.js" type="text/javascript"></script>
+  <script src="./js/script.js"></script>
 </body>
 </html>
