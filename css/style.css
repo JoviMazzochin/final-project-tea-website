@@ -162,7 +162,7 @@ body {
     padding: 0 25%;
 }
 
-.space-evenly {
+.justify-space-evenly {
     justify-content: space-evenly;
 }
 
@@ -232,4 +232,28 @@ input {
 
 .error {
     color:  red;
+}
+
+/*Cart*/
+.cart-content {
+    max-width: 800px;
+    margin: auto;
+  }
+
+.chevron {
+    font-size: 20px;
+    color: black;
+}
+
+/*dividers*/
+.horizontal-divider {
+    border-top: 1px solid black;
+    width: 100%;
+    opacity: 0.2;
+}
+
+.vertical-divider {
+    border-left: 1px solid black;
+    height: 70px;
+    opacity: 0.2;
 }
