@@ -4,6 +4,7 @@ $(function() {
     return regexpr.test(value);
   }, "Please enter a valid name."); //Adding a new rule for validate
 
+  //Validating Login Inputs
   $("#inputsLogin").validate({
     rules: {
       email: {
@@ -25,7 +26,7 @@ $(function() {
     },
     errorClass: "error",
   });
-
+  //Validation CreateAccount Inputs
   $("#inputsCreateAccount").validate({
     rules: {
       name: {
@@ -70,6 +71,9 @@ $(function() {
   });
 });
 
+//Hidding product modal on addToCart click.
 $("#addToCart").click(() => $("#productModal").modal("hide"));
 
+//Hidding userLogin modal on createAccoungButton click.
 $("#createAccountButton").click(() => $("#userLoginModal").modal("hide"));
+
