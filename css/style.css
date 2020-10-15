@@ -263,6 +263,25 @@ input {
 }
 
 .vertical-align-middle {
-    /* text-align: center;  */
     vertical-align:middle !important
+}
+
+.increase-amount {
+    font-size: 16px;
+    color: grey;
+}
+
+.decrease-amount {
+    font-size: 16px;
+    color: grey;
+}
+
+.increase-amount:hover {
+    font-size: 17px;
+    color: black;
+}
+
+.decrease-amount:hover {
+    font-size: 17px;
+    color: black;
 }

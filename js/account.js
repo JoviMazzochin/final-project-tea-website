@@ -76,4 +76,3 @@ $("#addToCart").click(() => $("#productModal").modal("hide"));
 
 //Hidding userLogin modal on createAccoungButton click.
 $("#createAccountButton").click(() => $("#userLoginModal").modal("hide"));
-
