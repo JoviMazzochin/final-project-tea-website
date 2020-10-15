@@ -1,3 +1,7 @@
+html, body {
+    overflow-x: hidden;
+  }
+
 body {
     background-color: rgba(0, 0, 0, 0.12);;
 }
@@ -249,11 +253,16 @@ input {
 .horizontal-divider {
     border-top: 1px solid black;
     width: 100%;
-    opacity: 0.1;
+    opacity: 0.3;
 }
 
 .vertical-divider {
     border-left: 1px solid black;
     height: 70px;
     opacity: 0.2;
+}
+
+.vertical-align-middle {
+    /* text-align: center;  */
+    vertical-align:middle !important
 }
