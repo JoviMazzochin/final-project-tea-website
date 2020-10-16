@@ -59,7 +59,7 @@ function setFinalPrice(){
         let row = lines[i]
         let amountElement = row.getElementsByClassName('amount-cart')[0];
         let amount = amountElement.textContent;
-        total = total + (15 * amount);
+        total = total + (15 * amount) ;
         // console.log(amount);
     }
     $('#total').text(total);
