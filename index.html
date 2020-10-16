@@ -323,9 +323,9 @@
                 <div class="modal-body">
                     <table class="table table-borderless">
                         <tbody>
-                            <tr class="item align-items-center my-2">
+                            <tr class="item-row align-items-center my-2">
                                 <td class="round-button mr-5 align-items-center vertical-align-middle" >
-                                    <i class="fa fa-times"></i>
+                                    <span class="delete-button fa fa-times"></span>
                                 </td>
                                 <td class="small-img mx-3 vertical-align-middle">
                                     <img src="./images/products/p1.png" alt="">
@@ -334,26 +334,19 @@
                                     <p>Lorem ipsum dolor sit amet vitae quae dolores nulla odit voluptatibus.</p>
                                 </td>
                                 <td class="amount-container mx-3 vertical-align-middle">
-                                    <select class="mb-3" name="amount" id="amount">
-                                        <option value="1" selected>1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
+                                    <div class="d-flex justify-content-center my-3">
+                                        <span><i class="increase-amount-cart fa fa-plus mr-3"></i></span>
+                                        <p class="amount-cart">1</p>
+                                        <span><i class="decrease-amount-cart fa fa-minus ml-3"></i></span>
+                                    </div>
                                 </td>
                                 <td class="price vertical-align-middle">
-                                    <p id="product price">$19,00</p>
+                                    <p class="product-price">$15,00</p>
                                 </td>
                             </tr>
-                            <tr class="item align-items-center my-2">
+                            <tr class="item-row align-items-center my-2">
                                 <td class="round-button mr-5 align-items-center vertical-align-middle" >
-                                    <i class="fa fa-times"></i>
+                                    <span class="delete-button fa fa-times"></span>
                                 </td>
                                 <td class="small-img mx-3 vertical-align-middle">
                                     <img src="./images/products/p3.png" alt="">
@@ -362,21 +355,14 @@
                                     <p>Lorem ipsum dolor sit amet vitae quae dolores nulla odit voluptatibus.</p>
                                 </td>
                                 <td class="amount-container mx-3 vertical-align-middle">
-                                    <select class="mb-3" name="amount" id="amount">
-                                        <option value="1" selected>1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
+                                    <div class="d-flex justify-content-center my-3">
+                                        <span><i class="increase-amount-cart fa fa-plus mr-3"></i></span>
+                                        <p class="amount-cart">1</p>
+                                        <span><i class="decrease-amount-cart fa fa-minus ml-3"></i></span>
+                                    </div>
                                 </td>
                                 <td class="price vertical-align-middle">
-                                    <p id="product price">$19,00</p>
+                                    <p class="product-price">$15,00</p>
                                 </td>
                             </tr>
                         </tbody>
@@ -407,6 +393,7 @@
     <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.js" type="text/javascript"></script>
     <script src="./js/account.js"></script>
     <script src="./js/productModal.js"></script>
+    <script src="./js/cart.js"></script>
 </body>
 
 </html>

@@ -249,6 +249,16 @@ input {
     color: black;
 }
 
+.delete-button {
+    color: gray;
+    font-size: 16px;
+}
+
+.delete-button:hover {
+    color: black;
+    font-size: 17px;
+}
+
 /*dividers*/
 .horizontal-divider {
     border-top: 1px solid black;

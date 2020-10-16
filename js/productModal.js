@@ -12,8 +12,9 @@ $('#productModal .decrease-amount').click(function () {
   if(valor != 1) {
     valor--;
   }
+  console.log(total);
   $('#productModal .amount').text(valor);
-  setPriceProductModal();
+  setPriceCartModal();
 
 });
 
@@ -22,11 +23,7 @@ $('#productModal .decrease-amount').click(function () {
 
 
 
-
-
-
-
-function setPriceProductModal() {
-  let finalPrice = $('#productModal .amount').text() * 15;
+function setPriceCartModal() {
+  let finalPrice = $('#cartModal .amount').text() * 15;
   $('#final-price b').text('$' + finalPrice + ',00');
 }
