@@ -40,7 +40,7 @@ for(i=0;i<lines.length;i++) {
 for(i=0;i<deleteButtons.length;i++) {
     let button = deleteButtons[i]
     button.addEventListener('click', function(event) {
-        var buttonClicked = event.target;
+        let buttonClicked = event.target;
         buttonClicked.parentElement.parentElement.remove();
         setFinalPrice();
     });
@@ -59,5 +59,8 @@ function setFinalPrice(){
     $('#total').text(total);
 }
 
-
+document.querySelector('#finishOrder').addEventListener('click', function () {
+    $("#cartModal").modal("hide");
+    $("#thanksModal").modal("show");
+});
 

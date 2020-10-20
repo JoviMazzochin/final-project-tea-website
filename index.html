@@ -205,12 +205,13 @@
                                 <p class="amount">1</p>
                                 <span><i class="decrease-amount fa fa-minus ml-3"></i></span>
                             </div>
-                            <p class="card-text" id="final-price"><b>$ 15,00</b></p>
+                            <p class="card-text"><b>$</b></p>
+                            <p class="card-text" id="final-price"><b>15</b></p>
+                            <p class="card-text"><b>,00</b></p>
                         </div>
                     </div>
                     <div class="col-12 modal-footer justify-content-center">
-                        <a id="addToCart" class="btn btn-outline-dark" data-toggle="modal"
-                            data-target="#cartModal">Add to Cart</a>
+                        <a id="addToCart" class="btn btn-outline-dark">Add to Cart</a>
                     </div>
                 </div>
             </div> 
@@ -218,7 +219,6 @@
     </div>
 
     <!-- User Login Modal -->
-
     <div class="modal fade" id="userLoginModal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -254,7 +254,6 @@
     </div>
 
     <!-- Create Account Modal -->
-
     <div class="modal fade" id="createAccountModal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -294,7 +293,6 @@
     </div>
 
     <!-- Cart Modal  -->
-
     <div class="modal fade" id="cartModal" tabindex="-1" role="dialog">
         <div class="cart-content modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -307,48 +305,7 @@
                 <div class="modal-body">
                     <table class="table table-borderless">
                         <tbody>
-                            <tr class="item-row align-items-center my-2">
-                                <td class="round-button mr-5 align-items-center vertical-align-middle" >
-                                    <span class="delete-button fa fa-times"></span>
-                                </td>
-                                <td class="small-img mx-3 vertical-align-middle cart-img">
-                                    <img src="./images/products/p1.png" alt="">
-                                </td>
-                                <td class="product-description mx-3 vertical-align-middle">
-                                    <p>Lorem ipsum dolor sit amet vitae quae dolores nulla odit voluptatibus.</p>
-                                </td>
-                                <td class="amount-container mx-3 vertical-align-middle">
-                                    <div class="d-flex justify-content-center my-3">
-                                        <span><i class="increase-amount-cart fa fa-plus mr-3"></i></span>
-                                        <p class="amount-cart">1</p>
-                                        <span><i class="decrease-amount-cart fa fa-minus ml-3"></i></span>
-                                    </div>
-                                </td>
-                                <td class="price vertical-align-middle">
-                                    <p class="product-price">$15,00</p>
-                                </td>
-                            </tr>
-                            <tr class="item-row align-items-center my-2">
-                                <td class="round-button mr-5 align-items-center vertical-align-middle" >
-                                    <span class="delete-button fa fa-times"></span>
-                                </td>
-                                <td class="small-img mx-3 vertical-align-middle">
-                                    <img src="./images/products/p3.png" alt="">
-                                </td>
-                                <td class="product-description mx-3 vertical-align-middle">
-                                    <p>Lorem ipsum dolor sit amet vitae quae dolores nulla odit voluptatibus.</p>
-                                </td>
-                                <td class="amount-container mx-3 vertical-align-middle">
-                                    <div class="d-flex justify-content-center my-3">
-                                        <span><i class="increase-amount-cart fa fa-plus mr-3"></i></span>
-                                        <p class="amount-cart">1</p>
-                                        <span><i class="decrease-amount-cart fa fa-minus ml-3"></i></span>
-                                    </div>
-                                </td>
-                                <td class="price vertical-align-middle">
-                                    <p class="product-price">$15,00</p>
-                                </td>
-                            </tr>
+                            
                         </tbody>
 
                     </table>
@@ -359,8 +316,29 @@
                             <h1 id="total">34</h1>
                             <h1>,00</h1>
                         </div>
-                        <a type="button" class="btn btn-dark mt-5">Finish Order</a>
+                        <a id="finishOrder" type="button" class="btn btn-dark mt-5">Finish Order</a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thanks Modal -->
+    <div class="modal fade" id="thanksModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header mb-3 d-flex align-items-center justify-content-between">
+                    <h1 class="text-success">Purchase Successful</h1>
+                    <button 
+                        type="button" 
+                        class="close" 
+                        data-dismiss="modal"
+                    ><span><i class="fas fa-times"></i></span></button>
+                </div>
+                <div class="modal-body text-center">
+                   <p>Your teas are comming soon.</p>
+                   <p>Thanks for buying with us.</p>
                 </div>
             </div>
         </div>
