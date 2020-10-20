@@ -1,8 +1,8 @@
 let deleteButtons = document.querySelectorAll('.delete-button');
-setFinalPrice()
-
-
 let lines = document.getElementsByClassName('item-row');
+setFinalPrice();
+
+//increase amount and setting price for each product
 for(i=0;i<lines.length;i++) {
     let row = lines[i]
         let increase = row.querySelector('.increase-amount-cart');
@@ -14,11 +14,11 @@ for(i=0;i<lines.length;i++) {
                 console.log(amount);
                 let price = row.getElementsByClassName('product-price')[0]
                 price.innerText = '$' +(15 * amount) + ',00';
-                setFinalPrice()
-        })
-
+                setFinalPrice();
+        });
 }
 
+//decrease amount and setting price for each product
 for(i=0;i<lines.length;i++) {
     let row = lines[i]
         let decrease = row.querySelector('.decrease-amount-cart');
@@ -32,15 +32,11 @@ for(i=0;i<lines.length;i++) {
                 console.log(amount);
                 let price = row.getElementsByClassName('product-price')[0]
                 price.innerText = '$' +(15 * amount) + ',00';
-                setFinalPrice()
-        })
-
+                setFinalPrice();
+        });
 }
 
-
-
-
-//Adding event to delete row
+//Adding event to delete row.
 for(i=0;i<deleteButtons.length;i++) {
     let button = deleteButtons[i]
     button.addEventListener('click', function(event) {
@@ -50,25 +46,18 @@ for(i=0;i<deleteButtons.length;i++) {
     });
 }
 
-
 //Set total
 function setFinalPrice(){
     let total = 0;
     let lines = document.getElementsByClassName('item-row');
     for(i=0;i<lines.length;i++) {
-        let row = lines[i]
+        let row = lines[i];
         let amountElement = row.getElementsByClassName('amount-cart')[0];
         let amount = amountElement.textContent;
         total = total + (15 * amount) ;
-        // console.log(amount);
     }
     $('#total').text(total);
 }
-
-function setProductPrice() {
-
-}
-
 
 
 
