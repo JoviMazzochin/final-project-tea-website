@@ -34,56 +34,42 @@ function productModalAmountIncreaseAndDecrease() {
         }
         $('#productModal .amount').text(valor);
         setPriceProductModal();
-
     });
 }
 
-function cartModalIncreaseDecreaseDelete() {
-    let lines = document.getElementsByClassName('item-row');
-    //increase amount and setting price for each product
-    for(i=0;i<lines.length;i++) {
-        let row = lines[i]
-            let increase = row.querySelector('.increase-amount-cart');
-            increase.addEventListener('click', function() {
-                    let amountElement = row.getElementsByClassName('amount-cart')[0];
-                    let amount = amountElement.textContent;
-                    amount++;
-                    amountElement.textContent = amount;
-                    console.log(amount);
-                    let price = row.getElementsByClassName('product-price')[0]
-                    price.innerText = '$' +(15 * amount) + ',00';
-                    setFinalPrice();
-            });
-    }
-
-    //decrease amount and setting price for each product
-    for(i=0;i<lines.length;i++) {
-        let row = lines[i]
-            let decrease = row.querySelector('.decrease-amount-cart');
-            decrease.addEventListener('click', function() {
-                    let amountElement = row.getElementsByClassName('amount-cart')[0];
-                    let amount = amountElement.textContent;
-                    if(amount != 1){
-                        amount--;
-                    }
-                    amountElement.textContent = amount;
-                    console.log(amount);
-                    let price = row.getElementsByClassName('product-price')[0]
-                    price.innerText = '$' +(15 * amount) + ',00';
-                    setFinalPrice();
-            });
-    }
-
-    //Adding event to delete row.
-    let deleteButtons = document.querySelectorAll('.delete-button');
-    for(i=0;i<deleteButtons.length;i++) {
-        let button = deleteButtons[i]
-        button.addEventListener('click', function(event) {
-            let buttonClicked = event.target;
-            buttonClicked.parentElement.parentElement.remove();
+function cartModalIncreaseDecreaseDelete(row) {
+    let increase = row.querySelector('.increase-amount-cart');
+    increase.addEventListener('click', function() {
+            let amountElement = row.getElementsByClassName('amount-cart')[0];
+            let amount = amountElement.textContent;
+            amount++;
+            amountElement.textContent = amount;
+            console.log(amount);
+            let price = row.getElementsByClassName('product-price')[0]
+            price.innerText = '$' +(15 * amount) + ',00';
             setFinalPrice();
-        });
-    }
+    });
+//decrease amount and setting price for each product
+    let decrease = row.querySelector('.decrease-amount-cart');
+    decrease.addEventListener('click', function() {
+            let amountElement = row.getElementsByClassName('amount-cart')[0];
+            let amount = amountElement.textContent;
+            if(amount != 1){
+                amount--;
+            }
+            amountElement.textContent = amount;
+            console.log(amount);
+            let price = row.getElementsByClassName('product-price')[0]
+            price.innerText = '$' + (15 * amount) + ',00';
+            setFinalPrice();
+    });
+    //Adding event to delete row.
+    let button = row.querySelector('.delete-button');
+    button.addEventListener('click', function(event) {
+        let buttonClicked = event.target;
+        buttonClicked.parentElement.parentElement.remove();
+        setFinalPrice();
+    });
 }
 
 
@@ -173,7 +159,7 @@ function addToCartActionClick() {
     // console.log(row);
     tbody.appendChild(row);
     // productModalAmountIncreaseAndDecrease();
+    cartModalIncreaseDecreaseDelete(row);
     setCartFinalPrice();
-    cartModalIncreaseDecreaseDelete();
     
 })}

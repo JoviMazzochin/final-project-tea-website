@@ -2,40 +2,6 @@ let deleteButtons = document.querySelectorAll('.delete-button');
 let lines = document.getElementsByClassName('item-row');
 setFinalPrice();
 
-//increase amount and setting price for each product
-for(i=0;i<lines.length;i++) {
-    let row = lines[i]
-        let increase = row.querySelector('.increase-amount-cart');
-        increase.addEventListener('click', function() {
-                let amountElement = row.getElementsByClassName('amount-cart')[0];
-                let amount = amountElement.textContent;
-                amount++;
-                amountElement.textContent = amount;
-                console.log(amount);
-                let price = row.getElementsByClassName('product-price')[0]
-                price.innerText = '$' +(15 * amount) + ',00';
-                setFinalPrice();
-        });
-}
-
-//decrease amount and setting price for each product
-for(i=0;i<lines.length;i++) {
-    let row = lines[i]
-        let decrease = row.querySelector('.decrease-amount-cart');
-        decrease.addEventListener('click', function() {
-                let amountElement = row.getElementsByClassName('amount-cart')[0];
-                let amount = amountElement.textContent;
-                if(amount != 1){
-                    amount--;
-                }
-                amountElement.textContent = amount;
-                console.log(amount);
-                let price = row.getElementsByClassName('product-price')[0]
-                price.innerText = '$' +(15 * amount) + ',00';
-                setFinalPrice();
-        });
-}
-
 //Adding event to delete row.
 for(i=0;i<deleteButtons.length;i++) {
     let button = deleteButtons[i]
