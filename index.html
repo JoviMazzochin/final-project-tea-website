@@ -302,22 +302,37 @@
                     <button type="button" class="close" data-dismiss="modal"><span><i
                                 class="fas fa-times"></i></span></button>
                 </div>
-                <div class="modal-body">
+                <div class="d-flex flex-column modal-body justify-content-center">
                     <table class="table table-borderless">
                         <tbody>
                             
                         </tbody>
 
                     </table>
-
-                    <div class="mt-5 modal-footer total d-flex flex-column align-items-center justify-content-center">
+                    <div class="d-flex">
                         <h1>Total: $</h1>
-                        <div class="d-flex">
-                            <h1 id="total">34</h1>
-                            <h1>,00</h1>
-                        </div>
-                        <a id="finishOrder" type="button" class="btn btn-dark mt-5">Finish Order</a>
+                        <h1 id="total">34</h1>
+                        <h1>,00</h1>
                     </div>
+                    
+                    <div class="mt-5 modal-footer total d-flex align-items-center justify-content-center">
+                        <div id="plots" class="d-flex">
+                            <div class="d-flex justify-content-center my-3 align-items-center mr-5">
+                                <span><i class="increase-amount-plots fa fa-plus mr-3"></i></span>
+                                <h2 class="amount-plots">1</h2>
+                                <h2>x</h2>
+                                <span><i class="decrease-amount-plots fa fa-minus ml-3"></i></span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <h2>of</h2>
+                                <div class="d-flex ml-5">
+                                    <h1>$</h1>
+                                    <h1 id="total-plots"></h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a id="finishOrder" type="button" class="btn btn-dark">Finish Order</a>
                 </div>
             </div>
         </div>
@@ -325,11 +340,11 @@
 
     <!-- Thanks Modal -->
     <div class="modal fade" id="thanksModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
 
-                <div class="modal-header mb-3 d-flex align-items-center justify-content-between">
-                    <h1 class="text-success">Purchase Successful</h1>
+                <div class="modal-header mb-3 d-flex align-items-center justify-content-between text-center">
+                    <h1 class="text-info"><b>Almost there,</b></h1>
                     <button 
                         type="button" 
                         class="close" 
@@ -337,8 +352,11 @@
                     ><span><i class="fas fa-times"></i></span></button>
                 </div>
                 <div class="modal-body text-center">
-                   <p>Your teas are comming soon.</p>
-                   <p>Thanks for buying with us.</p>
+                    <h3 class="text-info">now choose how would you like to pay for your purchases?</h3>
+                </div>
+                <div class="modal-footer text-center d-flex justify-content-center">
+                    <a class="btn btn-success align-items-center"><p>Pay with bank slip.</p></a>
+                    <a class="btn btn-success align-items-center"><p>Pay with card.</p></a>
                 </div>
             </div>
         </div>

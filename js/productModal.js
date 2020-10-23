@@ -1,15 +1,3 @@
-function setCartFinalPrice(){
-    let total = 0;
-    let lines = document.getElementsByClassName('item-row');
-    console.log(lines);
-    for(i=0;i<lines.length;i++) {
-        let row = lines[i];
-        let amountElement = row.getElementsByClassName('amount-cart')[0];
-        let amount = amountElement.textContent;
-        total = total + (15 * amount) ;
-    }
-    $('#total').text(total);
-}
 
 function setPriceProductModal() {
     let amount = $('#productModal .amount').text();
@@ -36,43 +24,6 @@ function productModalAmountIncreaseAndDecrease() {
         setPriceProductModal();
     });
 }
-
-function cartModalIncreaseDecreaseDelete(row) {
-    let increase = row.querySelector('.increase-amount-cart');
-    increase.addEventListener('click', function() {
-            let amountElement = row.getElementsByClassName('amount-cart')[0];
-            let amount = amountElement.textContent;
-            amount++;
-            amountElement.textContent = amount;
-            console.log(amount);
-            let price = row.getElementsByClassName('product-price')[0]
-            price.innerText = '$' +(15 * amount) + ',00';
-            setFinalPrice();
-    });
-//decrease amount and setting price for each product
-    let decrease = row.querySelector('.decrease-amount-cart');
-    decrease.addEventListener('click', function() {
-            let amountElement = row.getElementsByClassName('amount-cart')[0];
-            let amount = amountElement.textContent;
-            if(amount != 1){
-                amount--;
-            }
-            amountElement.textContent = amount;
-            console.log(amount);
-            let price = row.getElementsByClassName('product-price')[0]
-            price.innerText = '$' + (15 * amount) + ',00';
-            setFinalPrice();
-    });
-    //Adding event to delete row.
-    let button = row.querySelector('.delete-button');
-    button.addEventListener('click', function(event) {
-        let buttonClicked = event.target;
-        buttonClicked.parentElement.parentElement.remove();
-        setFinalPrice();
-    });
-}
-
-
 
 //Dúvida com Andréia
 let buttonsBuyNow = document.getElementsByClassName('card-buy-now');
@@ -160,6 +111,6 @@ function addToCartActionClick() {
     tbody.appendChild(row);
     // productModalAmountIncreaseAndDecrease();
     cartModalIncreaseDecreaseDelete(row);
-    setCartFinalPrice();
-    
+    setFinalPrice();
+    setPlotsTotal();
 })}
