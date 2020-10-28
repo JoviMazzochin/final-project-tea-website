@@ -194,6 +194,24 @@ body {
 
 /* User */
 
+.complement input{
+    width: 90%;
+    height: 100px;
+}
+
+.house-number input{
+    width: 20%;
+}
+
+.street input{
+    width: 90%;
+}
+
+.check-digits input{
+    width: 50px;
+}
+
+
 input {
     padding: 5px;
     border: solid 1px gray;
@@ -268,7 +286,7 @@ input {
 
 .vertical-divider {
     border-left: 1px solid black;
-    height: 70px;
+    height: 90px;
     opacity: 0.2;
 }
 

@@ -9,7 +9,7 @@ function cartModalIncreaseDecreaseDelete(row) {
             let amount = amountElement.textContent;
             amount++;
             amountElement.textContent = amount;
-            console.log(amount);
+            // console.log(amount);
             let price = row.getElementsByClassName('product-price')[0]
             price.innerText = '$' +(15 * amount) + ',00';
             setFinalPrice();
@@ -23,7 +23,7 @@ function cartModalIncreaseDecreaseDelete(row) {
                 amount--;
             }
             amountElement.textContent = amount;
-            console.log(amount);
+            // console.log(amount);
             let price = row.getElementsByClassName('product-price')[0]
             price.innerText = '$' + (15 * amount) + ',00';
             setFinalPrice();
@@ -38,21 +38,38 @@ function cartModalIncreaseDecreaseDelete(row) {
     });
 }
 
-//Set total
+function setFreightPrice() {
+    let freightAmount = document.getElementsByClassName('amount-cart');
+    // console.log(freightAmount);
+    let totalAmount = 0;
+    for(i=0; i<freightAmount.length; i++) {
+        let amount = Number(freightAmount[i].textContent);
+        totalAmount += amount;
+        // console.log(totalAmount);
+    }
+    let total = totalAmount * 2;
+    $('#freight').text(total);
+}
+
+//Setting subtotal
 function setFinalPrice(){
+    setFreightPrice();
     let total = 0;
     let lines = document.getElementsByClassName('item-row');
+    let freightTxt = $('#freight');
+    let freight = Number(freightTxt.text());
     for(i=0;i<lines.length;i++) {
         let row = lines[i];
         let amountElement = row.getElementsByClassName('amount-cart')[0];
         let amount = amountElement.textContent;
         total = total + (15 * amount) ;
     }
+    total = total + freight;
     $('#total').text(total);
     setPlotsTotal();
 }
 
-
+//increase plots
 document.querySelector('#plots .increase-amount-plots').addEventListener('click', function() {
     let amountPlots = $('.amount-plots');
     let plots = amountPlots.text();
@@ -60,7 +77,7 @@ document.querySelector('#plots .increase-amount-plots').addEventListener('click'
     amountPlots.text(plots);
     setPlotsTotal();
 })
-
+//decrease plots
 document.querySelector('#plots .decrease-amount-plots').addEventListener('click', function() {
     let amountPlots = $('.amount-plots');
     let plots = amountPlots.text();
@@ -70,18 +87,22 @@ document.querySelector('#plots .decrease-amount-plots').addEventListener('click'
     amountPlots.text(plots);
     setPlotsTotal();
 })
-
+//setting total with plots
 function setPlotsTotal() {
     let subTotal = $('#total').text();
     let amountPlots = $('.amount-plots').text();
     let finalValue = (subTotal/amountPlots).toFixed(2);
-    console.log(finalValue);
+    // console.log(finalValue);
     $('#total-plots').text(finalValue);
 }
 
-
 document.querySelector('#finishOrder').addEventListener('click', function () {
     $("#cartModal").modal("hide");
-    $("#thanksModal").modal("show");
+    $("#creditCardModal").modal("show");
 });
+
+// document.querySelector('#finishPurchase').addEventListener('click', function () {
+//     $("#creditCardModal").modal("hide");
+//     $("#thanksModal").modal("show");
+// });
 

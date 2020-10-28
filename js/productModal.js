@@ -107,10 +107,9 @@ function addToCartActionClick() {
             <p class="product-price">$${price},00</p>
         </td>
     `;
-    // console.log(row);
     tbody.appendChild(row);
-    // productModalAmountIncreaseAndDecrease();
     cartModalIncreaseDecreaseDelete(row);
     setFinalPrice();
     setPlotsTotal();
+    setFreightPrice();
 })}
