@@ -72,7 +72,7 @@ body {
 }
 
 .big-image:hover {
-    transform: scale(1.2);
+    transform: scale(1.02);
 }
 
 .overlay {
@@ -189,7 +189,7 @@ body {
 }
 
 .small-img img:hover {
-    transform: scale(1.2);
+    transform: scale(1);
 }
 
 /* User */
@@ -258,9 +258,9 @@ input {
 
 /*Cart*/
 .cart-content {
-    max-width: 800px;
+    min-width: 400px;
     margin: auto;
-  }
+}
 
 .chevron {
     font-size: 20px;
@@ -312,4 +312,63 @@ input {
 .decrease-amount:hover {
     font-size: 17px;
     color: black;
+}
+
+@media (max-width: 1300px){
+    .welcome-texts {
+        padding: 100px 100px;
+    }
+    .welcome-texts h1 {
+        font-family: 'Roboto Mono', monospace;
+        font-weight: 400;
+        font-size: 3rem;
+    }
+    .welcome-texts p {
+        font-family: 'Roboto Mono', monospace;
+        font-weight: 300;
+        font-size: 1.2rem;
+    }
+    .text-footer h1 {
+        font-size: 1rem;
+    }
+    .text-footer input {
+        min-width: 350px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .overlay {
+        padding: 10px;
+    }
+    .overlay h1 {
+        font-size: 2rem;
+    }
+    .overlay p {
+        margin: 0;
+
+    }
+    .text-footer input {
+        min-width: 300px;
+    }
+    .welcome-texts p {
+        font-family: 'Roboto Mono', monospace;
+        font-weight: 300;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 760px){
+    .welcome-texts {
+        padding: 70px 10px 0;
+    }
+    .text-footer input {
+        min-width: 200px;
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 430px){
+    .product-description-cart p {
+        font-size: 10px;
+    }
 }

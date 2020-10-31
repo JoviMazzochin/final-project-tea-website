@@ -93,7 +93,7 @@ function addToCartActionClick() {
         <td class="small-img mx-3 vertical-align-middle cart-img">
             <img src="${image}" alt="">
         </td>
-        <td class="product-description mx-3 vertical-align-middle">
+        <td class="product-description-cart mx-3 vertical-align-middle">
             <p>Lorem ipsum dolor sit amet vitae quae dolores nulla odit voluptatibus.</p>
         </td>
         <td class="amount-container mx-3 vertical-align-middle">

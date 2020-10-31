@@ -73,7 +73,9 @@ function setFinalPrice(){
 document.querySelector('#plots .increase-amount-plots').addEventListener('click', function() {
     let amountPlots = $('.amount-plots');
     let plots = amountPlots.text();
-    plots ++;
+    if(plots < 12) {
+        plots ++;
+    }
     amountPlots.text(plots);
     setPlotsTotal();
 })
@@ -101,8 +103,9 @@ document.querySelector('#finishOrder').addEventListener('click', function () {
     $("#creditCardModal").modal("show");
 });
 
-// document.querySelector('#finishPurchase').addEventListener('click', function () {
-//     $("#creditCardModal").modal("hide");
-//     $("#thanksModal").modal("show");
-// });
+document.querySelector('#finishPurchase').addEventListener('click', function (e) {
+    e.preventDefault();
+    $("#creditCardModal").modal("hide");
+    $("#thanksModal").modal("show");
+});
 

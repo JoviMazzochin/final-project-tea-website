@@ -4,7 +4,7 @@
 <head>
     <title>Sell Tea</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="bootstrap4/css/bootstrap.css">
@@ -19,7 +19,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -149,16 +149,18 @@
 
     <footer class="image-fade-container-footer">
         <div class="big-image-footer">
-            <div class="overlay-footer p-5 d-flex justify-space-evenly">
+            <div class="overlay-footer p-2 d-flex justify-content-between">
 
-                <div class="d-flex text-footer align-items-center mt-5">
-                    <h1 class="">RECEIVE THE LATEST UPDATES & EXCLUSIVE OFFERS VIA EMAIL</h1>
-                    <input class="form-control mr-sm-2" type="email" placeholder="exemple@selltea.com"
+                <div class="d-flex flex-column text-footer align-items-center mt-5">
+                    <h1 class="p-1">RECEIVE THE LATEST UPDATES & EXCLUSIVE OFFERS VIA EMAIL</h1>
+                    <div class="d-flex align-items-center">
+                        <input class="form-control mr-2" type="email" placeholder="exemple@selltea.com"
                         aria-label="Search">
-                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                    </div>
                 </div>
 
-                <div class="container-fluid social-midias">
+                <div class="container-fluid social-midias mb-4">
                     <h1>
                         Contact us:
                     </h1>
@@ -183,7 +185,6 @@
     </footer>
 
     <!-- Product Modal -->
-
     <div class="modal fade" id="productModal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -217,7 +218,6 @@
             </div> 
         </div>
     </div>
-
     <!-- User Login Modal -->
     <div class="modal fade" id="userLoginModal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -252,7 +252,6 @@
             </div>
         </div>
     </div>
-
     <!-- Create Account Modal -->
     <div class="modal fade" id="createAccountModal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
@@ -266,17 +265,17 @@
                     </div>
                     <form id="inputsCreateAccount" class="d-flex flex-column justify-content-between inputs mb-5">
                         <div class="d-flex flex-column">
-                            <div class="d-flex flex-column align-items-center form-group">
+                            <div class="d-flex flex-column align-items-center form-group street">
                                 <label for="name">Name:</label>
                                 <input type="text" name="name" id="name">
+                            </div>
+                            <div class="d-flex flex-column align-items-center form-group street">
+                                <label for="email">E-mail:</label>
+                                <input type="email" name="email" id="email">
                             </div>
                             <div class="d-flex flex-column align-items-center form-group">
                                 <label for="cpf">CPF:</label>
                                 <input type="text" name="cpf" id="cpf">
-                            </div>
-                            <div class="d-flex flex-column align-items-center form-group">
-                                <label for="email">E-mail:</label>
-                                <input type="email" name="email" id="email">
                             </div>
                             <div class="d-flex flex-column align-items-center form-group">
                                 <label for="createPassword">Password:</label>
@@ -321,7 +320,6 @@
             </div>
         </div>
     </div>
-
     <!-- Cart Modal  -->
     <div class="modal fade" id="cartModal" tabindex="-1" role="dialog">
         <div class="cart-content modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
@@ -373,7 +371,6 @@
             </div>
         </div>
     </div>
-
     <!-- Credit Card Modal -->
     <div class="modal fade" id="creditCardModal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
@@ -410,14 +407,13 @@
             </div>
         </div>
     </div>
-
     <!-- Thanks Modal -->
     <div class="modal fade" id="thanksModal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
 
                 <div class="modal-header mb-3 d-flex align-items-center justify-content-between text-center">
-                    <h1 class="text-info"><b>Finished,</b></h1>
+                    <h1 class="text-success"><b>Finished,</b></h1>
                     <button 
                         type="button" 
                         class="close" 
@@ -425,13 +421,13 @@
                     ><span><i class="fas fa-times"></i></span></button>
                 </div>
                 <div class="modal-body text-center">
-                    <h3 class="text-info">Your teas are comming to you.</h3>
+                    <h3 class="text-success">Your teas are comming to you.</h3>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- <script src="js/jquery-3.1.0.min.js" type="text/javascript"></script> -->
+    <script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
